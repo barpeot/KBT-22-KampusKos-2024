@@ -25,14 +25,36 @@
             <hr>
 
             <div class="text-center">
-                <h2>Just for the weekend</h2>
+                <h2>Cari Kos yang Sesuai Denganmu</h2>
                 <p>Discover new, inspiring places close to home.</p>
             </div>
 
             <br>
 
             <div class="row">
-                <div class="col-md-4 col-sm-12">
+                {{--Wrapper for slides--}}
+                <div class="carousel-inner" role="listbox">
+                                    <div class="item">
+                                        <img src="{{ asset('/images/New_York.jpeg') }}}">
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{ asset('/images/Chicago.jpeg') }}}">
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{asset('/images/San_Francisco.jpeg') }}}">
+                                    </div>
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                <!-- <div class="col-md-4 col-sm-12">
                     <a href="#">
                         <div class="discovery-card" style="background-image: url({{ asset('/images/New_York.jpeg') }})">
                             <div class="va-container">
@@ -54,6 +76,7 @@
                         </div>
                     </a>
                 </div>
+                
                 <div class="col-md-4 col-sm-6">
                     <a href="">
                         <div class="discovery-card" style="background-image: url({{ asset('/images/Chicago.jpeg') }})">
@@ -64,13 +87,13 @@
                             </div>
                         </div>
                     </a>
-                </div>
+                </div> -->
 
                 <br>
 
                 <div class="text-center">
                     <h2>Explore the world</h2>
-                    <p>See where people are travelling, all around the world.</p>
+                    <p>See where people are staying, all around Indonesia.</p>
                 </div>
 
                 <br>

@@ -133,8 +133,8 @@
                         <div class="form-group">
                             <label>Nightly Price</label>
                             <div class="input-group">
-                                <div class="input-group-addon">$</div>
-                                <input type="number" min="10" name="price" placeholder="eg. $100" class="form-control">
+                                <div class="input-group-addon">Rp</div>
+                                <input type="number" min="10" name="price" placeholder="eg. Rp1000000" class="form-control">
                             </div>
                         </div>
                     </div>

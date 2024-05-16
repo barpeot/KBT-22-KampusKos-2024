@@ -32,7 +32,7 @@
             </tr>
             <tr>
                 <td>Total</td>
-                <td>$<span id="reservation_sum"></span></td>
+                <td>Rp<span id="reservation_sum"></span></td>
             </tr>
             </tbody>
         </table>
