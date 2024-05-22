@@ -1,23 +1,23 @@
 @extends('layouts.app')
 
-@section('title')Your Reservations @endsection
+@section('title')Profil @endsection
 
 @section('content')
 
     <div class="row">
         <div class="col-md-3">
             <ul class="sidebar-list">
-                <li class="sidebar-item"><a href="{{ route('rooms') }}">Your Listing</a></li>
+                <li class="sidebar-item"><a href="{{ route('rooms') }}">Listing Milikmu</a></li>
                 <li class="sidebar-item">
-                    <a href="{{ route('your-reservations') }}" class=" sidebar-link active">Your Reservations</a>
+                    <a href="{{ route('your-reservations') }}" class=" sidebar-link active">Reservasi Masuk Milikmu</a>
                 </li>
-                <li class="sidebar-item"><a href="{{ route('your-trips') }}">Your Trips</a></li>
+                <li class="sidebar-item"><a href="{{ route('your-trips') }}">Reservasi Milikmu</a></li>
             </ul>
         </div>
         <div class="col-md-9">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Your Rooms Reservations
+                    Reservasi Masuk
                 </div>
                 <div class="panel-body">
 

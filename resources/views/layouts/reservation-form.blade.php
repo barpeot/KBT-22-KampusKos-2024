@@ -2,8 +2,8 @@
     {{ csrf_field() }}
     <div class="row">
         <div class="col-md-12 price_tag">
-            <span>{{ $room->price }}</span>
-            <span class="pull-right">Per Night</span>
+            <span>Rp {{ $room->price }}</span>
+            <span class="pull-right">Per Malam</span>
         </div>
     </div>
     <div class="row">
@@ -27,7 +27,7 @@
         <table class="reservation-table">
             <tbody>
             <tr>
-                <td>Day(s)</td>
+                <td>Hari</td>
                 <td><span id="reservation_days"></span></td>
             </tr>
             <tr>
@@ -39,7 +39,7 @@
         <br>
     </div>
 
-    <input type="submit" class="btn btn-primary wide" value="Book Now" style="margin-top: 20px">
+    <input type="submit" class="btn btn-primary wide" value="Pesan" style="margin-top: 20px">
 
 </form>
 

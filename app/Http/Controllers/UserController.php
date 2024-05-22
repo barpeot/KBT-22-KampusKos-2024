@@ -15,7 +15,7 @@ class UserController extends Controller
             $w->delete();
 
             $notification = array(
-                'message' => 'Room deleted from your wishlist',
+                'message' => 'Telah dihilangkan dari wishlist',
                 'alert-type' => 'success'
             );
 
@@ -25,7 +25,7 @@ class UserController extends Controller
         Auth::user()->wishlists()->save($w);
 
         $notification = array(
-            'message' => 'Room added to your wishlist',
+            'message' => 'Telah ditambahkan ke dalam wishlist',
             'alert-type' => 'success'
         );
 

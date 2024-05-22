@@ -19,7 +19,7 @@ class ReservationController extends Controller
         ]);
 
         $notification = array(
-            'message' => 'Your Reservation created',
+            'message' => 'Berhasil menambahkan Reservasi',
             'alert-type' => 'success'
         );
 

@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title')Create new room @endsection
+@section('title')Tambah Baru @endsection
 
 @section('content')
     <div class="panel panel-primary">
         <div class="panel-heading">
-            Create your beautiful place
+            Tambahkan Listing Baru
         </div>
         <div class="panel-body">
             <form action="{{ route('rooms.store') }}" method="post" enctype="multipart/form-data">
@@ -13,30 +13,30 @@
                 <div class="row">
                     <div class="col-md-4 select">
                         <div class="form-group">
-                            <label for="home_type">Home Type</label>
+                            <label for="home_type">Tipe Kediaman</label>
                             <select id="home_type" class="form-control" name="home_type" required>
+                                <option value=>Pilih Salah Satu</option>
+                                <option value="House">Rumah</option>
                                 <option value="Apartment">Apartment</option>
-                                <option value="House">House</option>
-                                <option value="Bed & Breakfast">Bed & Breakfast</option>
-                                <option value="Apartment">Apartment</option>
+                                <option value="Other">Lainnya</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="col-md-4 select">
                         <div class="form-group">
-                            <label id="room_type">Room Type</label>
+                            <label id="room_type">Tipe Ruangan</label>
                             <select required id="room_type" class="form-control" name="room_type">
-                                <option value="Entire">Entire</option>
-                                <option value="Private">Private</option>
-                                <option value="Shared">Shared</option>
+                                <option value="Entire">Full Property</option>
+                                <option value="Private">Partly Property</option>
+                                <option value="Shared">Shared Property</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="col-md-4 select">
                         <div class="form-group">
-                            <label for="accommodate">Accommodate</label>
+                            <label for="accommodate">Akomodasi</label>
                             <select required id="accommodate" name="accommodate" class="form-control">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="col-md-4 select">
                         <div class="form-group">
-                            <label for="bed_room">Bedrooms</label>
+                            <label for="bed_room"># Kamar Tidur</label>
                             <select required id="bed_room" name="bed_room" class="form-control">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -64,7 +64,7 @@
 
                     <div class="col-md-4 select">
                         <div class="form-group">
-                            <label for="bath_room">Bathrooms</label>
+                            <label for="bath_room"># Kamar Mandi</label>
                             <select required id="bath_room" name="bath_room" class="form-control">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -78,7 +78,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="listing_name">Listing name</label>
+                            <label for="listing_name">Nama Listing</label>
                             <textarea required id="listing_name" name="listing_name" class="form-control"
                                       placeholder="Be clear and descriptive"></textarea>
                         </div>
@@ -88,9 +88,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="summary">Summary</label>
+                            <label for="summary">Deskripsi</label>
                             <textarea required id="summary" name="summary" class="form-control"
-                                      placeholder="Tell about your house"></textarea>
+                                      placeholder="Ceritakan singkat tentang listing anda"></textarea>
                         </div>
                     </div>
                 </div>
@@ -98,9 +98,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label for="address">Address</label>
+                            <label for="address">Alamat</label>
                             <textarea required id="address" name="address" class="form-control"
-                                      placeholder="What is your address?"></textarea>
+                                      placeholder="Masukkan alamat anda"></textarea>
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                             <input type="checkbox" name="is_tv"> TV
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" name="is_kitchen"> Kitchen
+                            <input type="checkbox" name="is_kitchen"> Dapur
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="is_internet"> Internet
@@ -131,7 +131,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label>Nightly Price</label>
+                            <label>Harga per malam</label>
                             <div class="input-group">
                                 <div class="input-group-addon">Rp</div>
                                 <input type="number" min="10" name="price" placeholder="eg. Rp1000000" class="form-control">
@@ -144,7 +144,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <span class="btn btn-default btn-file">
-                                <i class="fa fa-cloud-upload fa-lg"></i>Upload Photos
+                                <i class="fa fa-cloud-upload fa-lg"></i>Upload Foto
                                 <input type="file" name="images[]" multiple="multiple">
                             </span>
                         </div>
@@ -154,7 +154,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <input type="checkbox" name="active"> Active
+                            <input type="checkbox" name="active"> Aktif?
                         </div>
                     </div>
                 </div>

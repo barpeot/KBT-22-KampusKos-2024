@@ -1,28 +1,28 @@
 @extends('layouts.app')
 
-@section('title')Edit Profile @endsection
+@section('title')Edit Profil @endsection
 
 @section('content')
     <div class="row">
         <div class="col-md-3">
             <ul class="sidebar-list">
                 <li class="sidebar-item">
-                    <a href="{{ route('profile') }}" class="sidebar-link active">Edit Profile</a>
+                    <a href="{{ route('profile') }}" class="sidebar-link active">Edit Profil</a>
                 </li>
             </ul>
             <br>
-            <a href="" class="btn btn-default wide">View My Profile</a>
+            <a href="" class="btn btn-default wide">Lihat Profil</a>
         </div>
 
         <div class="col-md-9 text-center">
             <div class="panel panel-default">
-                <div class="panel-heading">Your Profile</div>
+                <div class="panel-heading">Profil</div>
                 <div class="panel-body">
                     <div class="container">
                         <form action="{{ route('profile.update') }}" method="post">
                             {{ csrf_field() }}
                             <div class="form-group">
-                                <input type="text" name="fullname" autofocus placeholder="Full name"
+                                <input type="text" name="fullname" autofocus placeholder="Username"
                                        class="form-control" value="{{ $user->fullname }}">
                             </div>
                             <div class="form-group">
@@ -30,16 +30,16 @@
                                        class="form-control" value="{{ $user->email }}">
                             </div>
                             <div class="form-group">
-                                <input type="text" name="phone_number" autofocus placeholder="Phone Number"
+                                <input type="text" name="phone_number" autofocus placeholder="No. Telepon"
                                        class="form-control" value="{{ $user->phone_number }}">
                             </div>
                             <div class="form-group">
                                 <textarea class="form-control" name="description"
-                                          placeholder="Description">{{ $user->description }}</textarea>
+                                          placeholder="Deskripsi">{{ $user->description }}</textarea>
                             </div>
                             <div class="form-group{{ $errors->has('current_password') ? ' has-error' : '' }}">
                                 <input type="password" name="current_password" autofocus
-                                       placeholder="Current Password"
+                                       placeholder="Password saat ini"
                                        class="form-control">
                                 @if ($errors->has('current_password'))
                                     <span class="help-block">
@@ -49,7 +49,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="password" name="password" autofocus
-                                       placeholder="New Password (leave blank if you don't want to change it)"
+                                       placeholder="Password baru (kosongkan bila tidak ingin mengubah password)"
                                        class="form-control">
                             </div>
                             <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
@@ -63,7 +63,7 @@
                                 @endif
                             </div>
                             <div class="actions">
-                                <input type="submit" class="btn btn-primary" value="Save">
+                                <input type="submit" class="btn btn-primary" value="Simpan">
                             </div>
                         </form>
                     </div>

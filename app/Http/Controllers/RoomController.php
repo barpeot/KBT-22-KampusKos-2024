@@ -65,10 +65,30 @@ class RoomController extends Controller
                 $photo->save();
             }
         }
+        $rooms = Auth::user()->rooms;
+
+        return view('rooms.index', compact('rooms'));
     }
 
     public function show(Room $room)
     {
         return view('rooms.show', compact('room'));
+    }
+
+    public function search(Request $request)
+    {
+        $query = Room::query();
+
+        if ($request->filled('search')) {
+            $query->where(function($query) use ($request) {
+                $query->where('address', 'like', '%' . $request->input('search') . '%')
+                      ->orWhere('listing_name', 'like', '%' . $request->input('search') . '%');
+            });
+        }
+
+        $rooms = $query->get();
+        $search = $request->input('search');
+
+        return view('home', compact('search', 'rooms'));
     }
 }

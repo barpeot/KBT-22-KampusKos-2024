@@ -68,10 +68,7 @@
                     <li><a href="{{ route('register') }}">Register</a></li>
                     @else
                         <li>
-                            <a href="#"><i class="fa fa-envelope-o"></i> Messages</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-home fa-lg"></i> Become a Host</a>
+                            <a href="{{ route('rooms.create') }}"><i class="fa fa-home fa-lg"></i> Tambah Listing</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -82,19 +79,19 @@
 
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="{{ route('rooms') }}">Your Listings</a>
+                                    <a href="{{ route('rooms') }}">Listing Milikmu</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('rooms.create') }}">Add new listing</a>
+                                    <a href="{{ route('rooms.create') }}">Tambah Listing Baru</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('your-reservations') }}">Your Reservations</a>
+                                    <a href="{{ route('your-reservations') }}">Reservasi Milikmu</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('your-wishlist') }}">Wish List</a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('profile') }}">Edit Profile</a>
+                                    <a href="{{ route('profile') }}">Edit Profil</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('logout') }}"

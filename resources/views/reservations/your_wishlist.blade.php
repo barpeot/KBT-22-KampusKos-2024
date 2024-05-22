@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title')Your Trips @endsection
+@section('title')Profil @endsection
 
 @section('content')
 
@@ -8,12 +8,12 @@
         <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Your wishlist
+                    Wishlist
                 </div>
                 <div class="panel-body">
                     <div class="row" style="margin-bottom: 20px">
-                        <div class="col-md-6">Name</div>
-                        <div class="col-md-6">Room image</div>
+                        <div class="col-md-6">Nama</div>
+                        <div class="col-md-6">Image</div>
                     </div>
                     @foreach($wishlists as $wishlist)
                         <div class="row">
